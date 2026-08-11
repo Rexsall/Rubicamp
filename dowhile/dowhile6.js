@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let soal = ["5 + 3 = ?", "10 - 4 = ?", "7 * 2 = ?"];
 let jawaban = [8, 6, 14];
 let jawabanUser;

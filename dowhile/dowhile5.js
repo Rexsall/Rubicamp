@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let angkaRandom;
 let percobaan = 0;
 

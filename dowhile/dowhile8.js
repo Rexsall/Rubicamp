@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let namaDepan = "user";
 let username;
 let puas;

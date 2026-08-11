@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let saldo = 100000;
 let pilihan;
 let lanjut;

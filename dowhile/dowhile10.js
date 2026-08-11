@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let antrian = ["Budi", "Sari", "Andi"];
 let nasabahDilayani = 0;
 let adaNasabahBaru;

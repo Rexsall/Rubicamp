@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')()
+
 let dadu;
 let mainLagi;
 let totalSkor = 0;

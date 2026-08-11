@@ -1,36 +1,27 @@
-let bahasa = "EN"
-let Language
-let kalimat
+let bahasa = "EN";
 
 switch (bahasa) {
-  case "EN":
-    Language = "English"
-    kalimat = "Welcome! How can we help you today?"
-    break;
+    case "id":
+    case "ID":
+        console.log("Language: Bahasa Indonesia");
+        break;
 
-  case "ID":
-    Language = "Indonesia"
-    kalimat = "Selamat datang! Ada yang bisa kami bantu hari ini?"
-    break;  
+    case "en":
+    case "EN":
+        console.log("Language: English");
+        console.log("Welcome! How can we help you today?");
+        break;
 
-  case "JP":
-    Language = "Japanese"
-    kalimat = "いらっしゃいませ。本日は何かお手伝いできることはございますか？"
-    break;  
+    case "jp":
+    case "JP":
+        console.log("Language: Japanese");
+        break;
 
-  case "KR":
-    Language = "Korean"
-    kalimat = "환영합니다! 오늘 무엇을 도와드릴까요?"
-    break;  
-  
+    case "kr":
+    case "KR":
+        console.log("Language: Korean");
+        break;
 
-default:
-    Language = "Language not supported"; 
-    kalimat = "-"
-    break;
-
-  
+    default:
+        console.log("Language not supported");
 }
-
-console.log(`Language: ${Language}
-${kalimat}`);

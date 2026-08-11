@@ -1,20 +1,15 @@
+const prompt = require('prompt-sync')()
+
 let angka;
 let lanjut;
 
-// Tulis kode do-while loop di sini
-let dataAngka = [5, 3];
-let dataLanjut = ["y", "n"];
-let i = 0;
-
 do {
-    angka = dataAngka[i];
-    console.log("Masukkan angka: " + angka);
-    console.log("Kuadrat dari " + angka + " adalah: " + (angka * angka));
+    angka = Number(prompt("masukan angka: "));
 
-    lanjut = dataLanjut[i];
-    console.log("Apakah ingin melanjutkan? (y/n): " + lanjut);
+    console.log("kuadrat dari " + angka + "adalah" + (angka * angka));
 
-    i++;
+    lanjut = prompt("apakah ingin melanjutkan? y/n: ");
+
 } while (lanjut == "y");
 
 console.log("Terima kasih telah menggunakan program!");
