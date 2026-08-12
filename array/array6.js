@@ -1,33 +1,27 @@
-// Tulis function validateArrayData di sini
+function searchArray(arr, criteria) {
+  let found;
+  let filtered = [];
 
-function validateArrayData(arr) {
-  let allNumbers = arr.every(item => typeof item === "number");
-  let hasNulls = arr.some(item => item === null);
-  let hasUndefined = arr.some(item => item === undefined);
+  if (criteria.type === "number" && criteria.condition === "greater") {
+    found = arr.find(num => num > criteria.value);
+    filtered = arr.filter(num => num > criteria.value);
+  }
 
-  let stats = {
-    total: arr.length,
-    numbers: arr.filter(item => typeof item === "number").length,
-    strings: arr.filter(item => typeof item === "string").length,
-    nulls: arr.filter(item => item === null).length,
-    undefined: arr.filter(item => item === undefined).length
-  };
-
-  let cleaned = arr.filter(item => typeof item === "number");
+  if (criteria.type === "string" && criteria.condition === "contains") {
+    found = arr.find(word => word.includes(criteria.value));
+    filtered = arr.filter(word => word.includes(criteria.value));
+  }
 
   return {
-    isValid: allNumbers && !hasNulls && !hasUndefined,
-    allNumbers,
-    hasNulls,
-    hasUndefined,
-    stats,
-    cleaned
+    found: found,
+    filtered: filtered,
+    includes: arr.includes(criteria.value),
+    count: filtered.length
   };
 }
 
-// Driver code
-let data1 = [1, 2, 3, 4, 5];
-let data2 = [1, "2", 3, null, 5, undefined];
+let numbers = [1, 5, 10, 15, 20];
+console.log(searchArray(numbers, { type: "number", value: 10, condition: "greater" }));
 
-console.log(validateArrayData(data1));
-console.log(validateArrayData(data2));
+let words = ["apple", "banana", "cherry"];
+console.log(searchArray(words, { type: "string", value: "an", condition: "contains" }));
