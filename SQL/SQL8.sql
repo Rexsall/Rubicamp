@@ -2,9 +2,6 @@ SELECT
     first_name,
     last_name,
     hire_date,
-    CAST(strftime('%Y', '2023-12-01') AS INTEGER)
-    - CAST(strftime('%Y', hire_date) AS INTEGER) AS years_worked
+    CAST((julianday('2023-12-01') - julianday(hire_date)) / 365 AS INTEGER) AS years_worked
 FROM employees
-WHERE
-    CAST(strftime('%Y', '2023-12-01') AS INTEGER)
-    - CAST(strftime('%Y', hire_date) AS INTEGER) >= 2;
+WHERE (julianday('2023-12-01') - julianday(hire_date)) / 365 > 2;
