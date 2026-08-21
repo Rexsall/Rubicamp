@@ -4,22 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Updating Data</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <h1></h1>
+
     <from>
-        <label>Name:</label>
-        <input type="text">
+        <!--name-->
+        <input type="text" value="Rubi">
 
-        <label>Height:</label>
-        <input type="number">
+        <!--heigth-->
+        <input type="number" value="170">
 
-        <label>Weight:</label>
-        <input type="number">
 
-        <label>Birth date:</label>
-        <input type="date">
+        <!--weigth-->
+        <input type="text" value="60,4">
+
+
+        <!--birth date-->
+        <input type="date" value="1986-11-20">
+
 
         <label>Status:</label>
         <select>
@@ -27,8 +36,15 @@
             <option>false</option>
         </select>
 
-        <button type="submit">Save</button>
-        <button type="button">Cancel<button>
+        <!--Save-->
+        <button type="submit" class="save">
+            Save
+        </button>
+
+        <!--Cancel-->
+        <button type="button" class="cancel">
+            Cancel
+        </button>
 
     </from>
 </body>
